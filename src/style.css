@@ -37,16 +37,18 @@ body {
 
 .arrow:first-child {
   left: -23px;
+  display: none;
 }
 
 .arrow:last-child {
   right: -23px;
 }
 
-.wrapper .carousel{
+.wrapper .carousel {
   overflow: hidden;
   cursor: pointer;
   white-space: nowrap;
+  scroll-behavior: smooth;
 }
 
 .carousel img {
@@ -58,6 +60,15 @@ body {
 
 .carousel img:first-child{
   margin-left: 0;
+}
+
+.wrapper .dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+
+.wrapper .dragging img {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 900px) {
